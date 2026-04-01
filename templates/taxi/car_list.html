@@ -8,16 +8,12 @@
       <th>ID</th>
       <th>MODEL</th>
       <th>MANUFACTURER</th>
-      <th>UPDATE</th>
-      <th>DELETE</th>
     </tr>
     {% for car in car_list %}
       <tr>
         <td><a href="{% url 'taxi:car-detail' pk=car.id %}">{{ car.id }}</a></td>
         <td>{{ car.model }}</td>
         <td>{{ car.manufacturer.name }}</td>
-        <td><a href="{% url 'taxi:car-update' pk=car.id %}">UPDATE</a></td>
-        <td><a href="{% url 'taxi:car-delete' pk=car.id %}">DELETE</a></td>
       </tr>
     {% endfor %}
   </table>
